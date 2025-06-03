@@ -15,26 +15,48 @@
       scroll-behavior: smooth;
     }
     header {
-      background: #EEF4FF;
-      color: #282B31;
-      padding: 60px 20px;
-      text-align: center;
-      position: relative;
-    }
-    header img {
-      max-width: 160px;
-      position: absolute;
-      top: 20px;
-      left: 20px;
-    }
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.1em;
-      margin-bottom: 30px;
-    }
+  background: #EEF4FF;
+  color: #282B31;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-container img {
+  max-width: 160px;
+  margin-bottom: 20px;
+}
+
+.header-text h1 {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+.header-text p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    text-align: left;
+  }
+  .header-container img {
+    margin-bottom: 0;
+  }
+  .header-text {
+    max-width: 600px;
+  }
+}
     .btn {
       display: inline-block;
       margin: 5px;
@@ -90,11 +112,15 @@
 <body>
 
 <header>
-  <img src="logo blue.svg" alt="GreySynth Logo">
-  <h1>Empowering PE, VC & SPAC Investments</h1>
-  <p>Real-world CTOs. Cost reduction. Risk mitigation. Innovation acceleration.</p>
-  <a href="#contact" class="btn">Schedule Discovery Call</a>
-  <a href="#solutions" class="btn secondary">Explore Our Approach</a>
+  <div class="header-container">
+    <img src="logo-blue.svg" alt="GreySynth Logo">
+    <div class="header-text">
+      <h1>Empowering PE, VC & SPAC Investments</h1>
+      <p>Real-world CTOs. Cost reduction. Risk mitigation. Innovation acceleration.</p>
+      <a href="#contact" class="btn">Schedule Discovery Call</a>
+      <a href="#solutions" class="btn secondary">Explore Our Approach</a>
+    </div>
+  </div>
 </header>
 
 <section id="challenges">
